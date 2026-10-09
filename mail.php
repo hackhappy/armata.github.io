@@ -5,9 +5,9 @@ $recepient = "agragregra@ya.ru";
 $sitename  = "Учебный: Armata Financical Group";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 
-$name = trim($_POST["name"]);
-$phone = trim($_POST["phone"]);
-$formname = trim($_POST["formname"]);
+$name = htmlspecialchars(trim($_POST["name"]), ENT_QUOTES, "UTF-8");
+$phone = htmlspecialchars(trim($_POST["phone"]), ENT_QUOTES, "UTF-8");
+$formname = htmlspecialchars(trim($_POST["formname"]), ENT_QUOTES, "UTF-8");
 
 $message = "
 Форма: $formname <br>
